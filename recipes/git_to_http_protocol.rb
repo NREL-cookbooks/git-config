@@ -9,6 +9,6 @@
 
 execute 'git config --system url."https://github".insteadOf git://github' do
   not_if do
-    `git config --system --get url."https://".insteadOf`.strip == 'git://'
+    `git config --system --get url."https://github".insteadOf`.strip == 'git://github'
   end
 end
